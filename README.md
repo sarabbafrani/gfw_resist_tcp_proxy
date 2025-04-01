@@ -1,5 +1,5 @@
 # gfw_resist_tcp_proxy
-knock up IP blockage
+knock up GFW IP blockage
 
 # goodbye IP filtering & goodbye GFW mf'er
 <img src="/meme.jpg?raw=true" width="300" >
@@ -30,6 +30,7 @@ knock up IP blockage
 - they simply cant hold & check every single packet in high speed traffic. (unless with millions of dollar HW investment)
 
 # how to run
-- tcp violation need root/admin access to midify/send/sniff crafted packet
-- we implement method1 : a prototype for proof-of-concept
+- you need a VPS
+- need <b>root/admin access</b> in <b>both client & server</b> to midify/send/sniff crafted packet
+- we implement method1 : a prototype for proof-of-concept that can run on both windows & linux
 - its not ready for production yet but we plan to build stable and standalone version in near future
