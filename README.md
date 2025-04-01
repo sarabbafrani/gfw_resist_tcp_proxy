@@ -2,7 +2,7 @@
 knock up IP blockage
 
 # goodbye IP filtering & goodbye GFW mf'er
-<img src="/meme1.jpg?raw=true" width="300" >
+<img src="/meme.jpg?raw=true" width="300" >
 <br><br>
 
 # main Idea -> TCP violation:
