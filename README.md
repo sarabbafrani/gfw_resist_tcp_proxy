@@ -6,7 +6,7 @@ knock up IP blockage
 <br><br>
 
 # main Idea -> TCP violation:
-- GFW need to check every packet agaist large list of filtered ip in order to drop them<br>
+- GFW needs to check every packet against large list of filtered ip in order to drop them<br>
 - since its not practical in huge traffic, they separate tcp handshake (SYN) and check them only.<br>
 - in fact, they only drop SYN packet with blocked ip in both direction.
 - so we can bypass ip filtering by building communication link without tcp handshake.<br><br>
