@@ -16,7 +16,7 @@ knock up GFW IP blockage
 
 # how important is it?
 - it bypass ip blockage, so it bypass principal core of filtering
-- it change the paradigm of anti-censorship from "hiding traffic" / "escaping from blockage" to "drilling whatever blocked"
+- it change the paradigm of anti-censorship from "hiding traffic" / "escaping blockage" to "drilling whatever blocked"
 - what more can a censorman do after detecting a VPN, beside blocking ip?
 - similar to [fragment that bypass SNI](https://github.com/GFW-knocker/gfw_resist_tls_proxy) , it operate at the lower network layer
 - no matter which protocol used at upper level, it can drill everything, even blocked port
@@ -30,7 +30,7 @@ knock up GFW IP blockage
 - they simply cant hold & check every single packet in high speed traffic. (unless with millions of dollar HW investment)
 
 # how to run
-- you need a VPS
-- need <b>root/admin access</b> in <b>both client & server</b> to midify/send/sniff crafted packet
+- need a VPS
+- need <b>root/admin</b> access in <b>both client & server</b> to modify/send/sniff crafted packet
 - we implement method1 : a prototype for proof-of-concept that can run on both windows & linux
 - its not ready for production yet but we plan to build stable and standalone version in near future
