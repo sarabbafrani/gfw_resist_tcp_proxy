@@ -2,7 +2,7 @@
 knock up IP blockage
 
 # goodbye IP filtering & goodbye GFW mf'er
-<img src="/meme.jpg?raw=true" width="300" >
+<img src="/meme.jpg?raw=true" width="400" >
 <br><br>
 
 # main Idea -> TCP violation:
@@ -10,7 +10,7 @@ knock up IP blockage
 - since its not practical in huge traffic, they separate tcp handshake (SYN) and check them only.<br>
 - in fact, they only drop SYN packet with blocked ip in both direction.
 - so we can bypass ip filtering by building communication link without tcp handshake.<br><br>
-<img src="/slide1.png?raw=true" width="500" >
+<img src="/slide1.png?raw=true" width="800" >
 <br><br>
 
 # can GFW block tcp violation method?
