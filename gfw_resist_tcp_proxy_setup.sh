@@ -12,13 +12,8 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt update
             sudo apt install -y python3-pip git
 
-            # Try cross-compatible pip install
-            if pip3 install scapy aioquic 2>/dev/null; then
-                echo "[+] Python modules installed"
-            else
-                echo "[!] Trying with --break-system-packages (Debian-only)"
-                pip3 install --break-system-packages scapy aioquic
-            fi
+            echo "[+] Installing Python modules..."
+            pip3 install scapy aioquic
 
             if [ ! -f "$REPO/method1/mainserver.py" ]; then
                 echo "[i] Re-downloading clean repo..."
@@ -37,13 +32,8 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt update
             sudo apt install -y python3-pip git
 
-            # Try cross-compatible pip install
-            if pip3 install scapy aioquic 2>/dev/null; then
-                echo "[+] Python modules installed"
-            else
-                echo "[!] Trying with --break-system-packages (Debian-only)"
-                pip3 install --break-system-packages scapy aioquic
-            fi
+            echo "[+] Installing Python modules..."
+            pip3 install scapy aioquic
 
             if [ ! -f "$REPO/method1/mainclient.py" ]; then
                 echo "[i] Re-downloading clean repo..."
