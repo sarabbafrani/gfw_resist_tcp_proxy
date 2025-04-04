@@ -3,6 +3,17 @@
 REPO="gfw_resist_tcp_proxy"
 FORK_URL="https://github.com/sarabbafrani/gfw_resist_tcp_proxy.git"
 
+install_python_modules() {
+    echo "[+] Installing Python modules..."
+    pip3 install scapy aioquic || {
+        echo "[!] pip install failed. Trying with sudo..."
+        sudo pip3 install scapy aioquic || {
+            echo "[❌] Failed to install Python dependencies (scapy, aioquic). Exiting."
+            exit 1
+        }
+    }
+}
+
 echo "=== GFW Resist TCP Proxy Setup (via sarabbafrani fork) ==="
 echo "Are you setting up the server or the client?"
 select role in "Server (VPS)" "Client (Inside China)"; do
@@ -12,8 +23,7 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt update
             sudo apt install -y python3-pip git
 
-            echo "[+] Installing Python modules..."
-            pip3 install scapy aioquic
+            install_python_modules
 
             if [ ! -f "$REPO/method1/mainserver.py" ]; then
                 echo "[i] Re-downloading clean repo..."
@@ -32,8 +42,7 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt update
             sudo apt install -y python3-pip git
 
-            echo "[+] Installing Python modules..."
-            pip3 install scapy aioquic
+            install_python_modules
 
             if [ ! -f "$REPO/method1/mainclient.py" ]; then
                 echo "[i] Re-downloading clean repo..."
