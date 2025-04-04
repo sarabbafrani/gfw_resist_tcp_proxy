@@ -13,10 +13,14 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt install -y python3-pip git
             pip3 install --break-system-packages scapy
 
-            if [ ! -d "$REPO" ]; then
+            # Clean old clone if broken
+            if [ ! -f "$REPO/method1/server.py" ]; then
+                echo "[i] Re-downloading clean repo..."
+                rm -rf "$REPO"
                 git clone "$FORK_URL"
             fi
-            cd "$REPO/method1" || exit
+
+            cd "$REPO/method1" || { echo "[!] Failed to enter repo/method1 directory"; exit 1; }
 
             echo "[+] Starting server script..."
             sudo python3 server.py
@@ -28,10 +32,13 @@ select role in "Server (VPS)" "Client (Inside China)"; do
             sudo apt install -y python3-pip git
             pip3 install --break-system-packages scapy
 
-            if [ ! -d "$REPO" ]; then
+            if [ ! -f "$REPO/method1/client.py" ]; then
+                echo "[i] Re-downloading clean repo..."
+                rm -rf "$REPO"
                 git clone "$FORK_URL"
             fi
-            cd "$REPO/method1" || exit
+
+            cd "$REPO/method1" || { echo "[!] Failed to enter repo/method1 directory"; exit 1; }
 
             read -p "Enter your VPS IP address: " SERVER_IP
             echo "[+] Starting client script to connect to $SERVER_IP..."
