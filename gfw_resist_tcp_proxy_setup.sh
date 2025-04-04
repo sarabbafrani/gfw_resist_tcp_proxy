@@ -5,7 +5,7 @@ FORK_URL="https://github.com/sarabbafrani/gfw_resist_tcp_proxy.git"
 
 echo "=== GFW Resist TCP Proxy Setup (via sarabbafrani fork) ==="
 echo "Are you setting up the server or the client?"
-select role in "Server (VPS)" "Client (Inside China)"; do
+select role in "Server (VPS)" "Client (Inside Iran or China)"; do
     case $role in
         "Server (VPS)")
             echo "[+] Setting up the server..."
